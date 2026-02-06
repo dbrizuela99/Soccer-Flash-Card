@@ -38,7 +38,7 @@ public class Card {
     public void showAnswers() {
         int count = 1;
         for(String answer : answers){
-            System.out.println(count++ + answer);
+            System.out.println(count++ + ". " + answer);
         }
     }
 
@@ -49,5 +49,9 @@ public class Card {
 
     public void setCorrectAnswer(int correctAnswer) {
         this.correctAnswer = correctAnswer;
+    }
+
+    public String getCorrectAnswerText(){
+        return  answers[correctAnswer -1];
     }
 }
